@@ -1,0 +1,41 @@
+@CHARSET "UTF-8";
+			
+			
+	nav {    
+		    height:1px;
+		    width:1000px;
+		    float:left;
+		    font-size: 75px;     
+    	}
+			empty{
+    height:450px;
+    width:1000px;
+    float:left;
+    font-size: 15px;
+    
+     }
+     
+     section {
+    width:1000px;
+    height:200px;
+    float:left;
+    padding:10px;	 	 
+}
+
+			footer {
+width:980px;
+    background-color:black;
+    color:white;
+    clear:both;
+    text-align:center;
+    padding:5px;	 	 
+}
+	
+			header {
+    height:52px;
+    color:33CCFF;
+    text-align:left;
+    padding:2px;	 
+}
+
+			
