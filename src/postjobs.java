@@ -53,7 +53,7 @@ public class postjobs extends HttpServlet {
 		try{
 		boolean b=postjobs_entry.pj_postjobs(pj);
 		if(b){
-			response.sendRedirect("employer_home.html");
+			response.sendRedirect("employer_home.jsp");
 		}
 		else
 		{

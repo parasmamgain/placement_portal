@@ -15,6 +15,7 @@
      
 </div>
 <hr color="#33CCFF">
+<% //********************************** marks ******************************************** %>
 <form name="filter_marks" action="filter_marks.jsp" method="post">
 <table>
 <tr><td>Tenth</td><td>:<select name="tenthmarks">  <option>55</option><option>60</option><option>65</option><option>70</option>
@@ -36,6 +37,10 @@ Graduation</td><td>:<select name="graduationmarks">  <option>55</option><option>
 <input type="submit" value="Filter by marks"></div>
 </form><br>
 <hr color="#33CCFF">
+
+<% //********************************** branches******************************************** %>
+
+
 <form name="filter_branch" action="filter_branch.jsp" method="post">
 <table><td>Branch</td><td>:<select name="branch">  <option>CSE</option><option>IT</option><option>ECE</option><option>EE</option>
 				<option>CE</option><option>AEI</option><option>IPE</option><option>ME</option>
@@ -43,7 +48,9 @@ Graduation</td><td>:<select name="graduationmarks">  <option>55</option><option>
 	  </select></td></tr>
 	  </table><div align="right">
 <input  type="submit" value="Filter by branches"></div>
-</form><br>
+</form>
+<br>
+<% //********************************** marks and branches******************************************** %>
 <hr color="#33CCFF">
 <form name="filter_marks_branch" action="filter_marks_branch.jsp" method="post">
 <table>

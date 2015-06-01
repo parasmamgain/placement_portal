@@ -73,10 +73,10 @@ public class mail_question extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// TODO Auto-generated method stub
+			// TODO Auto-generated method stub
 			String result=null;
-		final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
-		  // Get a Properties object
+			final String SSL_FACTORY = "javax.net.ssl.SSLSocketFactory";
+			// Get a Properties object
 		     Properties props = System.getProperties();
 		     props.setProperty("mail.smtp.host", "smtp.gmail.com");
 		     props.setProperty("mail.smtp.socketFactory.class", SSL_FACTORY);

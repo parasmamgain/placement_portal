@@ -110,7 +110,9 @@ public class Student1 {
 	}
 	public static boolean PersonalInfo(Student1 s) throws Exception
 	{	String user="root",pass="root";
-		Class.forName("oracle.jdbc.OracleDriver");
+		String url="oracle.jdbc.OracleDriver";
+		//String url="com.mysql.jdbc.Driver";
+		Class.forName(url);
 		Connection con=DriverManager.getConnection("jdbc:oracle:thin:" + user + "/" + pass + "@localhost:1521:xe");
 		PreparedStatement pt= con.prepareStatement("update personaldetails set nationality=?,current_location=?,mobile=?,gender=? where jsid=?");
 		pt.setString(4, s.getGender());

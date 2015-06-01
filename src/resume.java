@@ -53,7 +53,7 @@ public class resume extends HttpServlet {
 		{	
 			boolean b=Student1.Resume(s);
 			if(b)
-			{	System.out.println("inside if");
+			{	
 				HttpSession session=request.getSession();
 				session.setAttribute("tenth", tenth);
 				session.setAttribute("twelfth", twelfth);

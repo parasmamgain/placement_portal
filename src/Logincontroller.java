@@ -40,7 +40,7 @@ public class Logincontroller extends HttpServlet {
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
-	
+	String jobs_count=null;
 		try{
 			HttpSession session=request.getSession(true);
 			Class.forName("oracle.jdbc.OracleDriver");
@@ -49,7 +49,7 @@ public class Logincontroller extends HttpServlet {
 	        	String username1=null,password=null;
 	        	String username,mname,fname,lname,email,jsid;
 			Connection conn = null;
-		    ResultSet rs	= null,rs1=null,rs2=null,rs3=null;
+		    ResultSet rs	= null,rs1=null,rs2=null,rs3=null,rs4=null;
 			username1=request.getParameter("username");
 			password=request.getParameter("password");
 			String choice=request.getParameter("category");
@@ -117,7 +117,7 @@ public class Logincontroller extends HttpServlet {
 	            	}
 	        }
 	        else if(choice.equals("employer"))
-	        {
+	        {	
 	        	conn = DriverManager.getConnection("jdbc:oracle:thin:" + user + "/" + pass + "@localhost:1521:xe");
 	            query="select * from e_signup where EMAIL=? and PASSWORD=?";
 	            st = conn.prepareStatement(query);
@@ -125,10 +125,22 @@ public class Logincontroller extends HttpServlet {
 	            st.setString(2,password);
 	            rs=st.executeQuery();
 	            if(rs.next()){
+	            	String query1=null;
 	            	HttpSession session1=request.getSession();
-	            	session1.setAttribute("cname",rs.getString(5));
+	            	session1.setAttribute("email",rs.getString(1));
+	            	session1.setAttribute("fname",rs.getString(2));
+	            	session1.setAttribute("mname",rs.getString(3));
+	            	session1.setAttribute("lname",rs.getString(4));
+	            	session1.setAttribute("cname",rs.getString(5));String cname=rs.getString(5);
 	            	session1.setAttribute("username",rs.getString(6));
-	            	rs.close();st.close();conn.close();
+	            	session1.setAttribute("Eid",rs.getString(8));
+	            	String query4="select count(cname) from postjobs where cname like (?)";
+	            	PreparedStatement st4 = conn.prepareStatement(query4);
+	            	st4 = conn.prepareStatement(query4);
+                    st4.setString(1,cname);
+		            rs4=st4.executeQuery();
+		            if(rs4.next()){jobs_count=rs4.getString(1);}
+		            session1.setAttribute("jobs_count",jobs_count);System.out.println(jobs_count);
 	            	response.sendRedirect("employer_home.jsp");
 	            	}
 	            else{

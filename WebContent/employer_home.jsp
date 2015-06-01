@@ -27,13 +27,30 @@
 <a href="postjobs.jsp">Postjobs</a></td><td style="width:166px">
 <a href="viewcandidates.jsp">View Candidates</a></td><td style="width:166px">
 <a href="filtercandidates.jsp">Filter Candidates</a></td><td style="width:166px">
-<a href="UnderConstruction.html">College Details</a></td><td style="width:166px">
-<a href="UnderConstruction.html">Update details</a></td><td style="width:166px">
-<a href="UnderConstruction.html">My Profile</a></td></tr>
+<a href="collegedetail.html">College Details</a></td><td style="width:166px">
+<a href="showdetails.jsp">Show details</a></td><td style="width:166px">
+<a href="e_profile.jsp">My Profile</a></td></tr>
 </table>
 <hr color="black">
 <br>
-<empty></empty><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<empty>
+
+<b>DIT is a University with difference- open to new ideas and thinking. Built on principles of trust, accountability and integrity , the very corner stones on which a foundation of this great institution was laid.</b>
+
+<h2><font color=#33ccff> Why DIT ?</font></h2>
+<ul type="circle">
+<li>Holistic Quality Education</li>
+<li>Industry Ready Curricula for various Academic Program</li>
+<li>Rated under AAA category in Uttarakhand by Careers 360 magazine.</li>
+<li>Excellent Location and Academic Ambience.</li>
+<li>Impressive Infrastructure</li>
+<li>Soft-skills, Aptitude and Software Training</li>
+<li>DIT University successfully running Entrepreneurship Development Cell (EDC).</li>
+<li>Just, Open, and a Transparent Academic Systems</li>
+<li>English and Foreign Languages</li>
+<li>Future ready tech-savvy programs in active collaboration with IBM</li>
+</ul>
+</empty>
 <iframe name="footer" align="bottom" seamless="seamless" frameborder="0" src="footer.html" height="120px" width="1000px"></iframe>
 
 </div>
