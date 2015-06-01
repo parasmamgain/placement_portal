@@ -46,7 +46,7 @@
       <execution>
          <phase>package</phase>
          <configuration>
-           <webXml>WebContent/WEB-INF/web.xml</webXml>
+           <webXml>/WebContent/WEB-INF/web.xml</webXml>
          </configuration>
       </execution>
     </executions>
